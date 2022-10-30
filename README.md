@@ -4,7 +4,7 @@
 
 # alexa-miio
 
-Amazon Alexa integration for Xiamoi vacuum cleaners which are supported by [python-miio](https://github.com/rytilahti/python-miio).
+Amazon Alexa integration for Xiaomi vacuum cleaners which are supported by [python-miio](https://github.com/rytilahti/python-miio).
 
 ## Preparing for AWS Lambda
 
