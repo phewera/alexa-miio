@@ -71,6 +71,7 @@ class MiCloudConnectionNotAvailable(Exception):
 
 
 class MiCloudConnection:
+    """ Connection to MiCloud """
 
     logger: Logger
     config: TMiCloudConfig = None
@@ -81,6 +82,7 @@ class MiCloudConnection:
         self.config = read_config(section='MiCloud')
 
     def connect(self) -> NoReturn:
+        """ Build connection to MiCloud """
         try:
             mc = MiCloud(
                 username=self.config.get('username'),
@@ -95,5 +97,6 @@ class MiCloudConnection:
     @property
     @mi_cloud_connection
     def device_configs(self) -> List[TDeviceConfig]:
+        """ All available devices from MiCloud """
         country = self.config.get('country', None)
         return self.connection.get_devices(country)
