@@ -66,7 +66,7 @@ class DeviceActionNotSupported(Exception):
         super().__init__(message)
 
 
-class MiDevice(object):
+class MiDevice:
     """ Main device class with control functions """
 
     logger: Logger
